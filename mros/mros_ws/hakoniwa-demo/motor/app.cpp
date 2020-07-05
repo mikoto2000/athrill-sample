@@ -22,7 +22,9 @@ void torque_callback(std_msgs::String *msg)
 {
 	int32 data;
 	sscanf(msg->data.c_str(), "v:%d", &data);
-	actuator_device_write(DEVICE_ACTUATOR_ADDR_MOTOR_TORQUE, (uint32)data);
+    data = data / 6;
+	actuator_device_write(DEVICE_ACTUATOR_ADDR_MOTOR_TORQUE_1, (uint32)data);
+	actuator_device_write(DEVICE_ACTUATOR_ADDR_MOTOR_TORQUE_2, (uint32)data);
 }
 void stearing_callback(std_msgs::String *msg)
 {

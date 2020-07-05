@@ -5,9 +5,10 @@
 #include "vdev.h"
 #include "device_io.h"
 
-#define DEVICE_ACTUATOR_ADDR_MOTOR_TORQUE           VDEV_TX_DATA(0)
-#define DEVICE_ACTUATOR_ADDR_STEARING               VDEV_TX_DATA(1)
-#define DEVICE_ACTUATOR_ADDR_BRAKE                  VDEV_TX_DATA(2)
+#define DEVICE_ACTUATOR_ADDR_MOTOR_TORQUE_1         VDEV_TX_DATA(1)
+#define DEVICE_ACTUATOR_ADDR_MOTOR_TORQUE_2         VDEV_TX_DATA(2)
+#define DEVICE_ACTUATOR_ADDR_STEARING               VDEV_TX_DATA(3)
+#define DEVICE_ACTUATOR_ADDR_BRAKE                  VDEV_TX_DATA(4)
 #define DEVICE_ACTUATOR_ADDR_SYNC                   VDEV_TX_FLAG(0)
 
 static inline void actuator_device_write(uint32 addr, uint32 data)
